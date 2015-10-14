@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8"><script src="AR_Drone_Instructions_Wiki_edX_files/1beac94c95" type="text/javascript"></script><script src="AR_Drone_Instructions_Wiki_edX_files/nr-768.js"></script><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"XA4GVl5ACwAEV1JQAA=="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=s(e),f=c.length,u=i(a,o,r),d=0;f>d;d++)c[d].apply(u,n);return u}function a(t,e){f[t]=s(t).concat(e)}function s(t){return f[t]||[]}function c(){return n(e)}var f={};return{on:a,emit:e,create:c,listeners:s,_events:f}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t){try{i.console&&console.log(t)}catch(e){}}var n,r=t("ee"),o=t(1),i={};try{n=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(i.console=!0,-1!==n.indexOf("dev")&&(i.dev=!0),-1!==n.indexOf("nr_dev")&&(i.nrDev=!0))}catch(a){}i.nrDev&&r.on("internal-error",function(t){e(t.stack)}),i.dev&&r.on("fn-err",function(t,n,r){e(r.stack)}),i.dev&&(e("NR AGENT IN DEVELOPMENT MODE"),e("flags: "+o(i,function(t){return t}).join(", ")))},{1:24,ee:"QJf3ax"}],4:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(f){try{r("ierr",[f,(new Date).getTime(),!0])}catch(u){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(6),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,t(5),window.onerror=e;try{throw new Error}catch(f){"stack"in f&&(t(1),t(2),"addEventListener"in window&&t(3),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)&&t(4),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:11,2:10,3:8,4:12,5:3,6:25,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t){if(window.addEventListener){var e=t("handle"),n=t("ee");t(1),window.addEventListener("click",function(){e("inc",["ck"])},!1),window.addEventListener("hashchange",function(){e("inc",["hc"])},!1),n.on("pushState-start",function(){e("inc",["ps"])})}},{1:9,ee:"QJf3ax",handle:"D5DuLP"}],6:[function(t){t("loader").features.ins=!0},{loader:"G9z0Bl"}],7:[function(t){function e(){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var n=t("ee"),r=t("handle"),o=t(1),i=t(2);t("loader").features.stn=!0,t(3);var a=Event;n.on("fn-start",function(t){var e=t[0];e instanceof a&&(this.bstStart=Date.now())}),n.on("fn-end",function(t,e){var n=t[0];n instanceof a&&r("bst",[n,e,this.bstStart,Date.now()])}),o.on("fn-start",function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),o.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),this.bstType])}),i.on("fn-start",function(){this.bstStart=Date.now()}),i.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),n.on("pushState-start",function(){this.time=Date.now(),this.startPath=location.pathname+location.hash}),n.on("pushState-end",function(){r("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),"addEventListener"in window.performance&&(window.performance.addEventListener("webkitresourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.webkitClearResourceTimings()},!1),window.performance.addEventListener("resourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.clearResourceTimings()},!1)),document.addEventListener("scroll",e,!1),document.addEventListener("keypress",e,!1),document.addEventListener("click",e,!1)}},{1:11,2:10,3:9,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],8:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=t("ee").create(),i=t(1)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s);for(var c=XMLHttpRequest.prototype;c&&!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&&n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t,e){function n(){return s}if(t[1]){var r=t[1];if("function"==typeof r){var s=a(r,"nr@wrapped",function(){return i(r,"fn-",n,r.name||"anonymous")});this.wrapped=t[1]=s,o.emit("initEventContext",[t,e],this.wrapped)}else"function"==typeof r.handleEvent&&i.inPlace(r,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:26,ee:"QJf3ax",gos:"7eSDFh"}],9:[function(t,e){var n=t("ee").create(),r=t(1)(n);e.exports=n,r.inPlace(window.history,["pushState","replaceState"],"-")},{1:26,ee:"QJf3ax"}],10:[function(t,e){var n=t("ee").create(),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:26,ee:"QJf3ax"}],11:[function(t,e){function n(t,e,n){t[0]=i(t[0],"fn-",null,n)}function r(t,e,n){function r(){return a}this.ctx={};var a={"nr@context":this.ctx};o.emit("initTimerContext",[t,n],a),t[0]=i(t[0],"fn-",r,n)}var o=t("ee").create(),i=t(1)(o);e.exports=o,i.inPlace(window,["setTimeout","setImmediate"],"setTimer-"),i.inPlace(window,["setInterval"],"setInterval-"),i.inPlace(window,["clearTimeout","clearImmediate"],"clearTimeout-"),o.on("setInterval-start",n),o.on("setTimer-start",r)},{1:26,ee:"QJf3ax"}],12:[function(t,e){function n(){f.inPlace(this,p,"fn-",o)}function r(t,e){f.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}function i(t,e){for(var n in t)e[n]=t[n];return e}var a=t("ee").create(),s=t(1),c=t(2),f=c(a),u=c(s),d=window.XMLHttpRequest,p=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=a,window.XMLHttpRequest=function(t){var e=new d(t);try{a.emit("new-xhr",[],e),e.hasOwnProperty("addEventListener")&&u.inPlace(e,["addEventListener","removeEventListener"],"-",o),e.addEventListener("readystatechange",n,!1)}catch(r){try{a.emit("internal-error",[r])}catch(i){}}return e},i(d,XMLHttpRequest),XMLHttpRequest.prototype=d.prototype,f.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),a.on("send-xhr-start",r),a.on("open-xhr-start",r)},{1:8,2:26,ee:"QJf3ax"}],13:[function(t){function e(t){var e=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!e.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var a=t.responseType,f="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,u=n(f);if(u&&(r.rxSize=u),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(e.cat=d.split(", ").pop())}}else e.status=0;r.cbTime=this.cbTime,o("xhr",[e,r,this.startTime])}}}function n(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,f=t(1),u=window.XMLHttpRequest;t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=e,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,e){var r=this.metrics,o=t[0],i=this;if(r&&o){var f=n(o);f&&(r.txSize=f)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{a.emit("internal-error",[n])}catch(r){}}};for(var u=0;c>u;u++)e.addEventListener(s[u],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof u&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof u&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof u&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:14,3:12,4:8,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],14:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],15:[function(t,e){function n(t){return function(){r(t,[(new Date).getTime()].concat(i(arguments)))}}var r=t("handle"),o=t(1),i=t(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(t,e){window.NREUM[e]=n("api-"+e)}),e.exports=window.NREUM},{1:24,2:25,handle:"D5DuLP"}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):void(r.q&&(r.q[t]||(r.q[t]=[]),r.q[t].push(e)))}var r=t("ee").create();e.exports=n,n.ee=r,r.q={}},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info,e=f.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){s(d,function(e,n){e in t||(t[e]=n)});var n="https"===u.split(":")[0]||t.sslForHttp;p.proto=n?"https://":"http://",a("mark",["onload",i()]);var r=f.createElement("script");r.src=p.proto+t.agent,e.parentNode.insertBefore(r,e)}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=t(1),c=window,f=c.document;t(2);var u=(""+location).split("?")[0],d={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-768.min.js"},p=e.exports={offset:i(),origin:u,features:{}};f.addEventListener?(f.addEventListener("DOMContentLoaded",o,!1),c.addEventListener("load",n,!1)):(f.attachEvent("onreadystatechange",r),c.attachEvent("onload",n)),a("mark",["firstbyte",i()])},{1:24,2:15,handle:"D5DuLP"}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],24:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&&(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],25:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],26:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@original",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,f;try{i=this,n=o(arguments),s=r&&r(n,i)||{}}catch(d){u([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return f=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,f],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=t,f(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,f?s+o:o,i,s))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){u([o,e,n,r])}}function f(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){u([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function u(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:25,ee:"QJf3ax"}]},{},["G9z0Bl",4,13,7,6,5]);</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","queueTime":0,"licenseKey":"1beac94c95","agent":"js-agent.newrelic.com/nr-768.min.js","transactionName":"NQQGYUZWDUNSVUMPWQxOIkBaVBdZXFgYEV8JCEpDXVIUQx1XRRJfAQ0BD3VFF1lQWlIwXwcW","applicationID":"3343327","errorBeacon":"bam.nr-data.net","applicationTime":403}</script>
+  <title>AR.Drone Instructions | Wiki | edX</title>
+
+ <link rel="icon" type="image/x-icon" href="https://d37djvu3ytnwxt.cloudfront.net/static/images/favicon.ico">
+
+  <link href="AR_Drone_Instructions_Wiki_edX_files/lms-style-vendor.css" rel="stylesheet" type="text/css">
+  <link href="AR_Drone_Instructions_Wiki_edX_files/lms-main.css" rel="stylesheet" type="text/css">
+  <link href="AR_Drone_Instructions_Wiki_edX_files/lms-style-course-vendor.css" rel="stylesheet" type="text/css">
+  <link href="AR_Drone_Instructions_Wiki_edX_files/lms-course.css" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript" src="AR_Drone_Instructions_Wiki_edX_files/lms-main_vendor.js" charset="utf-8"></script>
+  
+  
+  <script type="text/javascript" src="AR_Drone_Instructions_Wiki_edX_files/i18n.js"></script>
+  
+
+  <script type="text/javascript">
+    function ajaxError(){}
+
+    $.ajaxSetup({
+      timeout: 7000,
+      cache: false,
+      error: function(e, xhr, settings, exception) {
+          ajaxError();
+      }
+    });
+
+    function jsonWrapper(url, callback) {
+      $.getJSON(url, function(data) {
+        if (data == null) {
+          ajaxError();
+        } else {
+          callback(data);
+        }
+      });
+    }
+  </script>
+
+
+  
+
+
+  
+
+
+  
+
+  <meta name="path_prefix" content="">
+<script src="AR_Drone_Instructions_Wiki_edX_files/moment.html" data-requiremodule="moment" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Hover_Arrow {position: absolute; width: 15px; height: 11px; cursor: pointer}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 5px 0px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -khtml-border-radius: 5px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 1px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; color: #666666}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: .7em}
+.MathJax_MenuRadioCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuLabel {padding: 1px 2em 3px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #DDDDDD; margin: 4px 3px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: #606872; color: white}
+.MathJax_Menu_Close {position: absolute; width: 31px; height: 31px; top: -15px; left: -15px}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1px; bottom: 2px; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">div.MathJax_MathML {text-align: center; margin: .75em 0px; display: block!important}
+.MathJax_MathML {font-style: normal; font-weight: normal; line-height: normal; font-size: 100%; font-size-adjust: none; text-indent: 0; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0; min-height: 0; border: 0; padding: 0; margin: 0}
+span.MathJax_MathML {display: inline!important}
+.MathJax_mmlExBox {display: block!important; overflow: hidden; height: 1px; width: 60ex; min-height: 0; max-height: none; padding: 0; border: 0; margin: 0}
+[class="MJX-tex-oldstyle"] {font-family: MathJax_Caligraphic, MathJax_Caligraphic-WEB}
+[class="MJX-tex-oldstyle-bold"] {font-family: MathJax_Caligraphic, MathJax_Caligraphic-WEB; font-weight: bold}
+[class="MJX-tex-caligraphic"] {font-family: MathJax_Caligraphic, MathJax_Caligraphic-WEB}
+[class="MJX-tex-caligraphic-bold"] {font-family: MathJax_Caligraphic, MathJax_Caligraphic-WEB; font-weight: bold}
+@font-face /*1*/ {font-family: MathJax_Caligraphic-WEB; src: url('https://cdn.mathjax.org/mathjax/2.4-latest/fonts/HTML-CSS/TeX/otf/MathJax_Caligraphic-Regular.otf')}
+@font-face /*2*/ {font-family: MathJax_Caligraphic-WEB; font-weight: bold; src: url('https://cdn.mathjax.org/mathjax/2.4-latest/fonts/HTML-CSS/TeX/otf/MathJax_Caligraphic-Bold.otf')}
+[mathvariant="double-struck"] {font-family: MathJax_AMS, MathJax_AMS-WEB}
+[mathvariant="script"] {font-family: MathJax_Script, MathJax_Script-WEB}
+[mathvariant="fraktur"] {font-family: MathJax_Fraktur, MathJax_Fraktur-WEB}
+[mathvariant="bold-script"] {font-family: MathJax_Script, MathJax_Caligraphic-WEB; font-weight: bold}
+[mathvariant="bold-fraktur"] {font-family: MathJax_Fraktur, MathJax_Fraktur-WEB; font-weight: bold}
+[mathvariant="monospace"] {font-family: monospace}
+[mathvariant="sans-serif"] {font-family: sans-serif}
+[mathvariant="bold-sans-serif"] {font-family: sans-serif; font-weight: bold}
+[mathvariant="sans-serif-italic"] {font-family: sans-serif; font-style: italic}
+[mathvariant="sans-serif-bold-italic"] {font-family: sans-serif; font-style: italic; font-weight: bold}
+@font-face /*3*/ {font-family: MathJax_AMS-WEB; src: url('https://cdn.mathjax.org/mathjax/2.4-latest/fonts/HTML-CSS/TeX/otf/MathJax_AMS-Regular.otf')}
+@font-face /*4*/ {font-family: MathJax_Script-WEB; src: url('https://cdn.mathjax.org/mathjax/2.4-latest/fonts/HTML-CSS/TeX/otf/MathJax_Script-Regular.otf')}
+@font-face /*5*/ {font-family: MathJax_Fraktur-WEB; src: url('https://cdn.mathjax.org/mathjax/2.4-latest/fonts/HTML-CSS/TeX/otf/MathJax_Fraktur-Regular.otf')}
+@font-face /*6*/ {font-family: MathJax_Fraktur-WEB; font-weight: bold; src: url('https://cdn.mathjax.org/mathjax/2.4-latest/fonts/HTML-CSS/TeX/otf/MathJax_Fraktur-Bold.otf')}
+</style><style type="text/css">.MathJax_Display {text-align: center; margin: 1em 0em; position: relative; display: block!important; text-indent: 0; max-width: none; max-height: none; min-width: 0; min-height: 0; width: 100%}
+.MathJax .merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MathJax .MJX-monospace {font-family: monospace}
+.MathJax .MJX-sans-serif {font-family: sans-serif}
+#MathJax_Tooltip {background-color: InfoBackground; color: InfoText; border: 1px solid black; box-shadow: 2px 2px 5px #AAAAAA; -webkit-box-shadow: 2px 2px 5px #AAAAAA; -moz-box-shadow: 2px 2px 5px #AAAAAA; -khtml-box-shadow: 2px 2px 5px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true'); padding: 3px 4px; z-index: 401; position: absolute; left: 0; top: 0; width: auto; height: auto; display: none}
+.MathJax {display: inline; font-style: normal; font-weight: normal; line-height: normal; font-size: 100%; font-size-adjust: none; text-indent: 0; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0; min-height: 0; border: 0; padding: 0; margin: 0}
+.MathJax img, .MathJax nobr, .MathJax a {border: 0; padding: 0; margin: 0; max-width: none; max-height: none; min-width: 0; min-height: 0; vertical-align: 0; line-height: normal; text-decoration: none}
+img.MathJax_strut {border: 0!important; padding: 0!important; margin: 0!important; vertical-align: 0!important}
+.MathJax span {display: inline; position: static; border: 0; padding: 0; margin: 0; vertical-align: 0; line-height: normal; text-decoration: none}
+.MathJax nobr {white-space: nowrap!important}
+.MathJax img {display: inline!important; float: none!important}
+.MathJax * {transition: none; -webkit-transition: none; -moz-transition: none; -ms-transition: none; -o-transition: none}
+.MathJax_Processing {visibility: hidden; position: fixed; width: 0; height: 0; overflow: hidden}
+.MathJax_Processed {display: none!important}
+.MathJax_ExBox {display: block!important; overflow: hidden; width: 1px; height: 60ex; min-height: 0; max-height: none}
+.MathJax .MathJax_EmBox {display: block!important; overflow: hidden; width: 1px; height: 60em; min-height: 0; max-height: none}
+.MathJax .MathJax_HitBox {cursor: text; background: white; opacity: 0; filter: alpha(opacity=0)}
+.MathJax .MathJax_HitBox * {filter: none; opacity: 1; background: transparent}
+#MathJax_Tooltip * {filter: none; opacity: 1; background: transparent}
+@font-face {font-family: MathJax_Main; src: url('https://cdn.mathjax.org/mathjax/2.4-latest/fonts/HTML-CSS/TeX/woff/MathJax_Main-Regular.woff?rev=2.4-beta-2') format('woff'), url('https://cdn.mathjax.org/mathjax/2.4-latest/fonts/HTML-CSS/TeX/otf/MathJax_Main-Regular.otf?rev=2.4-beta-2') format('opentype')}
+@font-face {font-family: MathJax_Main; src: url('https://cdn.mathjax.org/mathjax/2.4-latest/fonts/HTML-CSS/TeX/woff/MathJax_Main-Bold.woff?rev=2.4-beta-2') format('woff'), url('https://cdn.mathjax.org/mathjax/2.4-latest/fonts/HTML-CSS/TeX/otf/MathJax_Main-Bold.otf?rev=2.4-beta-2') format('opentype'); font-weight: bold}
+@font-face {font-family: MathJax_Main; src: url('https://cdn.mathjax.org/mathjax/2.4-latest/fonts/HTML-CSS/TeX/woff/MathJax_Main-Italic.woff?rev=2.4-beta-2') format('woff'), url('https://cdn.mathjax.org/mathjax/2.4-latest/fonts/HTML-CSS/TeX/otf/MathJax_Main-Italic.otf?rev=2.4-beta-2') format('opentype'); font-style: italic}
+@font-face {font-family: MathJax_Math; src: url('https://cdn.mathjax.org/mathjax/2.4-latest/fonts/HTML-CSS/TeX/woff/MathJax_Math-Italic.woff?rev=2.4-beta-2') format('woff'), url('https://cdn.mathjax.org/mathjax/2.4-latest/fonts/HTML-CSS/TeX/otf/MathJax_Math-Italic.otf?rev=2.4-beta-2') format('opentype'); font-style: italic}
+@font-face {font-family: MathJax_Caligraphic; src: url('https://cdn.mathjax.org/mathjax/2.4-latest/fonts/HTML-CSS/TeX/woff/MathJax_Caligraphic-Regular.woff?rev=2.4-beta-2') format('woff'), url('https://cdn.mathjax.org/mathjax/2.4-latest/fonts/HTML-CSS/TeX/otf/MathJax_Caligraphic-Regular.otf?rev=2.4-beta-2') format('opentype')}
+@font-face {font-family: MathJax_Size1; src: url('https://cdn.mathjax.org/mathjax/2.4-latest/fonts/HTML-CSS/TeX/woff/MathJax_Size1-Regular.woff?rev=2.4-beta-2') format('woff'), url('https://cdn.mathjax.org/mathjax/2.4-latest/fonts/HTML-CSS/TeX/otf/MathJax_Size1-Regular.otf?rev=2.4-beta-2') format('opentype')}
+@font-face {font-family: MathJax_Size2; src: url('https://cdn.mathjax.org/mathjax/2.4-latest/fonts/HTML-CSS/TeX/woff/MathJax_Size2-Regular.woff?rev=2.4-beta-2') format('woff'), url('https://cdn.mathjax.org/mathjax/2.4-latest/fonts/HTML-CSS/TeX/otf/MathJax_Size2-Regular.otf?rev=2.4-beta-2') format('opentype')}
+@font-face {font-family: MathJax_Size3; src: url('https://cdn.mathjax.org/mathjax/2.4-latest/fonts/HTML-CSS/TeX/woff/MathJax_Size3-Regular.woff?rev=2.4-beta-2') format('woff'), url('https://cdn.mathjax.org/mathjax/2.4-latest/fonts/HTML-CSS/TeX/otf/MathJax_Size3-Regular.otf?rev=2.4-beta-2') format('opentype')}
+@font-face {font-family: MathJax_Size4; src: url('https://cdn.mathjax.org/mathjax/2.4-latest/fonts/HTML-CSS/TeX/woff/MathJax_Size4-Regular.woff?rev=2.4-beta-2') format('woff'), url('https://cdn.mathjax.org/mathjax/2.4-latest/fonts/HTML-CSS/TeX/otf/MathJax_Size4-Regular.otf?rev=2.4-beta-2') format('opentype')}
+.MathJax .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style></head>
+
+<body class="view-in-course view-wiki lang_en"><div style="visibility: hidden; overflow: hidden; position: absolute; top: 0px; height: 1px; width: auto; padding: 0px; border: 0px none; margin: 0px; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal;"><div id="MathJax_Hidden"></div></div><div style="display: none;" id="MathJax_Message"></div>
+  <div class="window-wrap" dir="${static.dir_rtl()}">
+    <a class="nav-skip" href="#main-article">Skip to main content</a>
+    
+      
+        
+
+
+
+
+
+
+
+
+
+<header class="global slim" aria-label="Main" role="banner">
+  <div class="wrapper-header nav-container">
+    <h1 class="logo" itemscope="" itemtype="http://schema.org/Organization">
+      <a href="https://www.edx.org/" title="Home page" itemprop="url">
+        
+            <img src="AR_Drone_Instructions_Wiki_edX_files/edx-logo-77x36.png" alt="edX" title="edX" itemprop="url">
+            <span class="sr">Home Page</span>
+        
+      </a>
+    </h1>
+
+    <h2 class="course-header"><span class="provider">TUMx:</span> AUTONAVx Autonomous Navigation for Flying Robots</h2>
+
+
+    <ul class="user">
+      <li class="primary">
+        <a href="https://courses.edx.org/dashboard" class="user-link">
+          <span class="sr">Dashboard for:</span>
+        </a>
+      </li>
+      <li class="primary">
+        <a href="#" class="dropdown" aria-haspopup="true" aria-expanded="false"><span class="sr">More options dropdown</span> ▾</a>
+        <ul class="dropdown-menu" aria-label="More Options" role="menu">
+          
+            <li><a href="https://courses.edx.org/dashboard">Dashboard</a></li>
+            <li><a href="https://courses.edx.org/account/settings">Account</a></li>
+          
+          <li><a href="https://courses.edx.org/logout" role="menuitem">Sign Out</a></li>
+        </ul>
+      </li>
+    </ul>
+
+
+  </div>
+</header>
+<!--[if lte IE 9]>
+<div class="ie-banner" aria-hidden="true"><strong>Warning:</strong> Your browser is not fully supported. We strongly recommend using <a href="https://www.google.com/chrome" target="_blank">Chrome</a> or <a href="http://www.mozilla.org/firefox" target="_blank">Firefox</a>.</div>
+<![endif]-->
+
+
+
+
+
+
+<div class="help-tab">
+  <a href="#help-modal" rel="leanModal" role="button">Help</a>
+</div>
+
+<section id="help-modal" class="modal" aria-hidden="true" role="dialog" aria-label="edX Help">
+  <div class="inner-wrapper" id="help_wrapper">
+    <button class="close-modal " tabindex="0">
+      <i class="icon fa fa-remove"></i>
+      <span class="sr">
+        Close
+      </span>
+    </button>
+
+    <header>
+      <h2>
+	<span class="edx">edX</span> Help
+      </h2>
+      <hr>
+    </header>
+
+
+
+    <p>For <strong>questions on course lectures, homework, tools, or materials for this course</strong>, post in the <a href="https://courses.edx.org/courses/course-v1:TUMx+AUTONAVx+2T2015/discussion/forum" target="_blank">course discussion forum</a>.
+    </p>
+
+    <p>Have <strong>general questions about edX</strong>? You can find lots of helpful information in the edX <a href="https://www.edx.org/student-faq" target="_blank">FAQ</a>.
+      </p>
+
+    <p>Have a <strong>question about something specific</strong>? You can contact the edX general support team directly:</p>
+    <hr>
+
+    <div class="help-buttons">
+      <a href="#" id="feedback_link_problem">Report a problem</a>
+      <a href="#" id="feedback_link_suggestion">Make a suggestion</a>
+      <a href="#" id="feedback_link_question">Ask a question</a>
+    </div>
+
+    <p class="note">Please note: The edX support team is English 
+speaking. While we will do our best to address your inquiry in any 
+language, our responses will be in English.</p>
+
+  </div>
+
+  <div class="inner-wrapper" id="feedback_form_wrapper">
+    <button class="close-modal">
+      <i class="icon fa fa-remove"></i>
+      <span class="sr">
+        Close
+      </span>
+    </button>
+
+    <header></header>
+
+    <form id="feedback_form" class="feedback_form" method="post" data-remote="true" action="/submit_feedback">
+      <div id="feedback_error" class="modal-form-error" tabindex="-1"></div>
+      <label data-field="subject" for="feedback_form_subject">Briefly describe your issue*</label>
+      <input name="subject" id="feedback_form_subject" aria-required="true" type="text">
+      <label data-field="details" for="feedback_form_details">Tell us the details*
+<span class="tip">Include error messages, steps which lead to the issue, etc</span></label>
+      <textarea name="details" id="feedback_form_details" aria-required="true"></textarea>
+      <input name="issue_type" type="hidden">
+      <input name="course_id" value="course-v1:TUMx+AUTONAVx+2T2015" type="hidden">
+      <div class="submit">
+        <input name="submit" value="Submit" id="feedback_submit" type="submit">
+      </div>
+    </form>
+  </div>
+
+  <div class="inner-wrapper" id="feedback_success_wrapper" tabindex="0">
+    <button class="close-modal" tabindex="0">
+      <i class="icon fa fa-remove"></i>
+      <span class="sr">
+        Close
+      </span>
+    </button>
+
+    <header>
+      <h2>Thank You!</h2>
+      <hr>
+    </header>
+
+    
+    <p>
+    Thank you for your inquiry or feedback.  We typically respond to a 
+request within one business day (Monday to Friday, 13:00 UTC to 21:00 
+UTC.) In the meantime, please review our <a href="https://www.edx.org/student-faq" target="_blank" id="feedback-faq-link" tabindex="0">detailed FAQs</a> where most questions have already been answered.
+    </p>
+  </div>
+</section>
+
+<script type="text/javascript">
+(function() {
+    var onModalClose = function() {
+            $("#help-modal .close-modal").off("click");
+            $("#lean_overlay").off("click");
+            $("#help-modal").attr("aria-hidden", "true");
+            $('area,input,select,textarea,button').removeAttr('tabindex');
+            $(".help-tab a").focus();
+        },
+        cycle_modal_tab = function(from_element_name, to_element_name) {
+            $(from_element_name).on('keydown', function(e) {
+                var keyCode = e.keyCode || e.which;
+                if (keyCode === 9) {
+                    e.preventDefault();
+                    $(to_element_name).focus();
+                }
+            });
+        };
+
+    $(".help-tab").click(function() {
+        $(".field-error").removeClass("field-error");
+        $("#feedback_form")[0].reset();
+        $("#feedback_form input[type='submit']").removeAttr("disabled");
+        $("#feedback_form_wrapper").css("display", "none");
+        $("#feedback_error").css("display", "none");
+        $("#feedback_success_wrapper").css("display", "none");
+        $("#help_wrapper").css("display", "block");
+        $("#help-modal").attr("aria-hidden", "false");
+        $("#help-modal .close-modal").click(onModalClose);
+        $("#lean_overlay").click(onModalClose);
+        $("#help_wrapper .close-modal").focus();
+    });
+    showFeedback = function(event, issue_type, title, subject_label, details_label) {
+        $("#help_wrapper").css("display", "none");
+        $("#feedback_form input[name='issue_type']").val(issue_type);
+        $("#feedback_form_wrapper").css("display", "block");
+        $("#feedback_form_wrapper header").html("<h2>" + title + "</h2><hr>");
+        $("#feedback_form_wrapper label[data-field='subject']").html(subject_label);
+        $("#feedback_form_wrapper label[data-field='details']").html(details_label);
+        $("#feedback_form_wrapper .close-modal").focus();
+        event.preventDefault();
+    };
+    cycle_modal_tab("#feedback_link_question", "#help_wrapper .close-modal");
+    cycle_modal_tab("#feedback_submit", "#feedback_form_wrapper .close-modal");
+    cycle_modal_tab("#feedback-faq-link", "#feedback_success_wrapper .close-modal");
+    $("#help-modal").on("keydown", function(e) {
+        var keyCode = e.keyCode || e.which;
+        if (keyCode === 27) {
+            e.preventDefault();
+            $("#help_wrapper .close-modal").click();
+        }
+    });
+    $("#feedback_link_problem").click(function(event) {
+        showFeedback(
+            event,
+            "problem",
+            "Report a Problem",
+            "Brief description of the problem" + "*",
+            "Details of the problem you are encountering" + "*" + "<span class='tip'>" +
+              "Include error messages, steps which lead to the issue, etc." + "</span>"
+        );
+    });
+    $("#feedback_link_suggestion").click(function(event) {
+        showFeedback(
+            event,
+            "suggestion",
+            "Make a Suggestion",
+            "Brief description of your suggestion" + "*",
+            "Details" + "*"
+        );
+    });
+    $("#feedback_link_question").click(function(event) {
+        showFeedback(
+            event,
+            "question",
+            "Ask a Question",
+            "Brief summary of your question" + "*",
+            "Details" + "*"
+        );
+    });
+    $("#feedback_form").submit(function() {
+        $("input[type='submit']", this).attr("disabled", "disabled");
+        $('area,input,select,textarea,button').attr('tabindex', -1);
+        $("#feedback_form_wrapper .close-modal").focus();
+    });
+    $("#feedback_form").on("ajax:complete", function() {
+        $("input[type='submit']", this).removeAttr("disabled");
+    });
+    $("#feedback_form").on("ajax:success", function(event, data, status, xhr) {
+        $("#feedback_form_wrapper").css("display", "none");
+        $("#feedback_success_wrapper").css("display", "block");
+        $("#feedback_success_wrapper").focus();
+    });
+    $("#feedback_form").on("ajax:error", function(event, xhr, status, error) {
+        $(".field-error").removeClass("field-error").removeAttr("aria-invalid");
+        var responseData;
+        try {
+            responseData = jQuery.parseJSON(xhr.responseText);
+        } catch(err) {
+        }
+        if (responseData) {
+            $("[data-field='"+responseData.field+"']").addClass("field-error").attr("aria-invalid", "true");
+            $("#feedback_error").html(responseData.error).stop().css("display", "block");
+        } else {
+            // If no data (or malformed data) is returned, a server error occurred
+            htmlStr = "An error has occurred.";
+            htmlStr += " " + _.template(
+              "Please {link_start}send us e-mail{link_end}.",
+              {link_start: '<a href="#" id="feedback_email">', link_end: '</a>'},
+              {interpolate: /\{(.+?)\}/g})
+            $("#feedback_error").html(htmlStr).stop().css("display", "block");
+            $("#feedback_email").click(function(e) {
+                mailto = "mailto:" + "bugs@edx.org" +
+                    "?subject=" + $("#feedback_form input[name='subject']").val() +
+                    "&body=" + $("#feedback_form textarea[name='details']").val();
+                window.open(mailto);
+                e.preventDefault();
+            });
+        }
+        // Make change explicit to assistive technology
+        $("#feedback_error").focus();
+    });
+})(this)
+</script>
+
+
+
+      
+    
+    <div class="content-wrapper" id="content">
+      
+  
+  
+    
+
+
+
+
+
+
+<nav class="wiki wrapper-course-material" aria-label="Course Material">
+  <div class="course-material">
+    <ol class="course-tabs">
+        
+          <li>
+             <a href="https://courses.edx.org/courses/course-v1:TUMx+AUTONAVx+2T2015/courseware" class="">
+                 Courseware
+             </a>
+          </li>
+        
+          <li>
+             <a href="https://courses.edx.org/courses/course-v1:TUMx+AUTONAVx+2T2015/info" class="">
+                 Course Info
+             </a>
+          </li>
+        
+          <li>
+             <a href="https://courses.edx.org/courses/course-v1:TUMx+AUTONAVx+2T2015/discussion/forum" class="">
+                 Discussion
+             </a>
+          </li>
+        
+          <li>
+             <a href="https://courses.edx.org/courses/course-v1:TUMx+AUTONAVx+2T2015/course_wiki" class="active">
+                 Wiki
+                   <span class="sr">, current location</span>
+             </a>
+          </li>
+        
+          <li>
+             <a href="https://courses.edx.org/courses/course-v1:TUMx+AUTONAVx+2T2015/progress" class="">
+                 Progress
+             </a>
+          </li>
+      
+    </ol>
+  </div>
+</nav>
+
+
+  
+  
+
+  <section class="container wiki view" id="wiki-content">
+    <div class="wiki-wrapper">
+      
+
+        
+
+
+<header>
+  <ul class="breadcrumb pull-left">
+    
+      <li><a href="https://courses.edx.org/courses/course-v1:TUMx+AUTONAVx+2T2015/wiki/">Wiki</a></li>
+      
+      <li><a href="https://courses.edx.org/courses/course-v1:TUMx+AUTONAVx+2T2015/wiki/TUMx.AUTONAVx.2T2014/">TUMx.AUTONAVx.2T2015</a></li>
+      
+    <li class="active"><a href="https://courses.edx.org/courses/course-v1:TUMx+AUTONAVx+2T2015/wiki/TUMx.AUTONAVx.2T2014/ardrone-instructions/">AR.Drone Instructions</a></li>
+    
+  </ul>
+
+  <div class="global-functions pull-right">
+    <!-- <form class="search-wiki pull-left">
+      <input type="search" placeholder="search wiki" />
+    </form> -->
+    <a class="add-article-btn btn pull-left" href="https://courses.edx.org/courses/course-v1:TUMx+AUTONAVx+2T2015/wiki/TUMx.AUTONAVx.2T2014/_create/" style="padding: 7px;">
+      <i class="icon fa fa-plus"></i>
+      Add article
+    </a>
+  </div>
+</header>
+
+
+
+
+        
+
+        
+
+  <div class="article-wrapper">
+
+    <article class="main-article" id="main-article">
+        
+          <h1>AR.Drone Instructions</h1>
+
+        
+
+        
+        
+
+
+
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+  
+  
+  <div class="wiki-article">
+  
+
+    
+      
+        <p><strong>Note 1</strong>: This is a draft article. Please feel free to correct mistakes and add additional links/hints where appropriate.</p>
+<p><strong>Note 2</strong>: These instructions apply to Ubuntu 12.04 and ROS Fuerte. It would be great if somebody could create a <a href="https://courses.edx.org/courses/course-v1:TUMx+AUTONAVx+2T2015/wiki/TUMx.AUTONAVx.2T2014/ardrone-instructions/ARDrone_on_Saucy">second page</a> with instructions for Ubuntu and ROS Hydro.</p>
+<h1 id="installation">Installation</h1>
+<p>We assume that you have <a href="http://releases.ubuntu.com/12.04/">Ubuntu 12.04 LTS</a>
+ installed on your computer. If you use normally a different operating 
+system and you don't have a free partition on your hard drive, you can 
+also install Ubuntu onto a (bootable) USB stick. In this case, you need 
+at least 4 GB of additional storage on the stick. </p>
+<p>Furthermore, we need to install ROS (the Robot Operating System) and 
+various ROS packages (ardrone driver, joystick, Python example). In the 
+following, we guide you through all steps required to set up your system
+ accordingly.</p>
+<h2 id="install-ros">Install ROS</h2>
+<p>This section comprises the core steps of installing ROS Fuerte on Ubuntu 12.04 as
+described <a href="http://www.ros.org/wiki/fuerte/Installation/Ubuntu/">here</a>:</p>
+<ul>
+<li>First, add the respective keys and repositories:</li>
+</ul>
+<blockquote>
+<p><code>$ sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu precise main" &gt; /etc/apt/sources.list.d/ros-latest.list'</code></p>
+<p><code>$ wget http://packages.ros.org/ros.key -O - | sudo apt-key add -</code></p>
+<p><code>$ sudo apt-get update</code></p>
+</blockquote>
+<ul>
+<li>Now install ROS and some useful packages:</li>
+</ul>
+<blockquote>
+<p><code>$ sudo apt-get install ros-fuerte-desktop-full 
+ros-fuerte-joystick-drivers python-rosinstall python-rosdep 
+liblapack-dev libblas-dev daemontools libudev-dev libiw-dev</code></p>
+</blockquote>
+<ul>
+<li>Create your ROS workspace folder</li>
+</ul>
+<blockquote>
+<p><code>$ mkdir ~/workshop</code></p>
+</blockquote>
+<ul>
+<li>Add ROS commands and your workspace folder to your <code>.bashrc</code>: Open it
+in your favorite text-editor (e.g. using <code>gedit ~/.bashrc</code>), and append the
+following two lines at the end:</li>
+</ul>
+<blockquote>
+<p><code>$ source /opt/ros/fuerte/setup.bash</code></p>
+<p><code>$ export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:~/workshop</code></p>
+</blockquote>
+<ul>
+<li>Check your installation by opening a new console window and starting</li>
+</ul>
+<blockquote>
+<p><code>$ roscore</code></p>
+</blockquote>
+<ul>
+<li>Everything is fine when you see the line <code>"started core service [/rosout]"</code>. You
+can then stop roscore by hitting <code>CTRL-C</code>.</li>
+</ul>
+<h2 id="install-and-compile-ros-packages">Install and compile ROS packages</h2>
+<ul>
+<li>Download the source code into your ROS workspace.</li>
+</ul>
+<blockquote>
+<p><code>$ cd ~/workshop</code></p>
+<p><code>$ GIT_SSL_NO_VERIFY=1 git clone https://github.com/AutonomyLab/ardrone_autonomy.git -b fuerte</code></p>
+<p><code>$ GIT_SSL_NO_VERIFY=1 git clone https://github.com/tum-vision/autonavx_ardrone.git</code></p>
+</blockquote>
+<ul>
+<li>Compile the packages. Note that the compilation process requires internet
+access and takes around 10-20 minutes.</li>
+</ul>
+<blockquote>
+<p><code>$ roscd ardrone_autonomy</code></p>
+<p><code>$ ./build_sdk.sh</code></p>
+<p><code>$ rosmake ardrone_autonomy ardrone_joystick</code></p>
+</blockquote>
+<h2 id="manual-flight">Manual Flight</h2>
+<p>In this section, we set up the AR.Drone, perform a manual flight with
+ a Sony Playstation 3 joystick, and record a bag file (logfile). For 
+this task you need a Parrot AR.Drone, a PS3 joystick and some space to 
+fly around. </p>
+<ul>
+<li>Connect the AR.Drone battery.</li>
+<li>Connect to the AR.Drone WLAN.</li>
+<li>Start the ROS master and the AR.Drone driver (each in a separate terminal window).</li>
+</ul>
+<blockquote>
+<p><code>$ roscore</code></p>
+<p><code>$ rosrun ardrone_autonomy ardrone_driver</code></p>
+<p>This command will print out some information on the connection etc. 
+After 70 lines or so, the output should come to a rest. If everything 
+works, the result should look as <a href="http://pastebin.com/cfTBFckq">follows</a>.</p>
+<p>If you see error messages (bad packets etc), then your firmware might
+ not be compatible with the AR.Drone driver on your computer. In this 
+case, either try to upgrade to a newer firmware or upgrade the ardrone 
+driver (whatever is newer). </p>
+</blockquote>
+<ul>
+<li>Open a new terminal window and see whether you get <code>navdata</code> messages from the quadrotor:</li>
+</ul>
+<blockquote>
+<p><code>$ rostopic echo /ardrone/navdata</code></p>
+<p>The result should look as <a href="http://pastebin.com/ake3a1TS">follows</a>.
+ This message contains the telemetry data from the quadrotor. In this 
+lecture, we are primarily interested in the readings from the IMU and 
+visual odometry sensor. The current orientation of the AR.drone is given
+ in roll-pitch-yaw angles (<code>rotX</code>, <code>rotY</code>, <code>rotZ</code>). The height is provided in <code>altd</code>. The horizontal speed can be read out from <code>vx</code> and <code>vy</code>. Note that some fields (like <code>altd</code>) only provide values while the quadrotor is actually flying. Press <code>CTRL-C</code> to stop when you are happy.</p>
+</blockquote>
+<ul>
+<li>Now start rviz, a 2D and 3D visualization tool for all kinds of sensor messages.</li>
+</ul>
+<blockquote>
+<p><code>$ rosrun rviz rviz</code></p>
+</blockquote>
+<ul>
+<li>
+<p>Add an <code>Image</code> display to RVIZ and change the <code>Image Topic</code> to /ardrone/image_raw.
+You should see the live camera stream from the quadrotor's frontal camera.</p>
+</li>
+<li>
+<p>Plug in the joystick, and start the joystick driver as follows:</p>
+</li>
+</ul>
+<blockquote>
+<p><code>$ rosrun joy joy_node</code></p>
+<p>On some computers, it's necesary to add the parameter <code>_dev:=/dev/input/jsX</code>, where <code>X</code> is the number of the joystick device. Inspect the topic <code>/joy</code> to verify that the joystick works as follows (open a new terminal window):</p>
+<p><code>$ rostopic echo /joy</code></p>
+<p>Press <code>CTRL-C</code> when you are satisfied. The output should look as <a href="">follows</a>.</p>
+</blockquote>
+<ul>
+<li>
+<p>Note: You might have to press the P (PlayStation) button in the middle once on the joystick to activate it.</p>
+</li>
+<li>
+<p>The <code>ardrone_joystick</code> node we provided translates the raw
+ joystick messages to the correct control commands sent to the 
+quadrotor. Start it as follows:</p>
+</li>
+</ul>
+<blockquote>
+<p><code>$ rosrun ardrone_joystick ardrone_teleop</code></p>
+<p>This node translates the joystick messages (<code>/joy</code>) to velocity command messages that the AR.drone understands (<code>/cmd_vel</code>). To check whether these messages are actually generated, open a new console and run:</p>
+<p><code>$ rostopic echo /cmd_vel</code></p>
+<p>Move the sticks of the joystick. The result should look as <a href="http://pastebin.com/xNFijmxA">follows</a>.</p>
+</blockquote>
+<ul>
+<li>
+<p>The axes and buttons are assigned as follows:</p>
+<ul>
+<li>
+<p>The <strong>R1 button</strong> toggles the emergency state of the 
+robot. Pressing R1 while flying will stop the rotors immediately. If the
+ LED beneath the rotors are red (for example, after a crash), press R1 
+to reset the quadrotor.</p>
+</li>
+<li>
+<p>The <strong>L1 button</strong> starts the motors of the quadrotor. It
+ also works as a deadman switch so that the robot will land if you 
+release it during flight. The quadrotor will ascend to one meter above 
+ground and tries to hold this position.</p>
+</li>
+<li>
+<p>The <strong>left stick</strong> can be used to control the roll and 
+pitch angle of the quadrotor. Keep in mind that these velocities are 
+given in the local frame of the quadrotor!</p>
+</li>
+<li>
+<p>The <strong>right stick</strong> controls the yaw-rate and the altitude.</p>
+</li>
+<li>
+<p>The <strong>select button</strong> can be used to switch between the two cameras. This can also be done by executing <code>rosservice call /ardrone/togglecam</code>.</p>
+</li>
+<li>
+<p>The <strong>triangle button</strong> can be used to switch off the 
+on-board position stabilization: Per default, the quadrotor hovers (i.e.
+ stabilizes its horizontal position by keeping vx and vy at zero) when 
+you do not touch the left control stick. It even actively decelerates 
+when letting go of the left control stick.</p>
+</li>
+<li>
+<p>Pressing and holding the <strong>triangle button</strong> will switch
+ this off, i.e. give you direct control over roll and pitch at all times
+ - note how this leads to rapid drift in horizontal position.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>First Flight:</strong> You are all set up to fly the quadrotor! Fly a short round
+through the lab to practice your flying skills. You can try to take a group
+picture of yourself while flying! Tip: If the quadrotor does not take-off vertically 
+but immediately shoots away, you need to calibrate the IMU. This is done by placing the
+quadrocopter on a horizontal surface, and calling <code>rosservice call /ardrone/flattrim</code>.</p>
+</li>
+</ul>
+<h2 id="autonomous-flight">Autonomous Flight</h2>
+<ul>
+<li>We provide several (minimalistic) Python examples in the folder <code>ardrone_python</code>:</li>
+</ul>
+<blockquote>
+<p><code>$ roscd ardrone_python/src</code></p>
+</blockquote>
+<ul>
+<li><a href="https://github.com/tum-vision/autonavx_ardrone/blob/master/ardrone_python/src/example1_odometry.py">Example 1: Odometry</a>.
+ This script just prints some data from the navdata message sent by the 
+quadrotor. It also works when the robot is not flying - just move the 
+quadrotor by hand and see how the values change. As an exercise, add the
+ code from week 2 (odometry) in the callback to compute the position of 
+the quadrotor in world (global) coordinates. Note that the height sensor
+ does not work when the quadrotor is not flying. Use the joystick to 
+navigate the robot around and inspect the values. </li>
+</ul>
+<blockquote>
+<p><code>$ ./example1_odometry.py</code></p>
+</blockquote>
+<ul>
+<li><a href="https://github.com/tum-vision/autonavx_ardrone/blob/master/ardrone_python/src/example2_takeoff_and_land.py">Example 2: Take-off and land</a>. The quadrotor takes off, waits for 10 seconds, and lands again. </li>
+</ul>
+<blockquote>
+<p><code>$ ./example2_takeoff_and_land.py</code></p>
+</blockquote>
+<ul>
+<li><a href="https://github.com/tum-vision/autonavx_ardrone/blob/master/ardrone_python/src/example3_trajectory.py">Example 3: Simple trajectory</a>. This script publishes <code>/cmd_vel</code>
+ messages. The quadrotor takes off, flies forward for 2 seconds, turns 
+for 2 seconds, and flies forward for another 2 seconds, and lands again.
+ Note that you have to kill the <code>ardrone_teleop</code> node before you run this script - otherwise, the joystick (which also sends <code>/cmd_vel</code> messages) will override the motion commands from this script.</li>
+</ul>
+<blockquote>
+<p><code>$ ./example3_trajectory.py</code></p>
+</blockquote>
+<ul>
+<li><a href="https://github.com/tum-vision/autonavx_ardrone/blob/master/ardrone_python/src/example4_combined.py">Example 4: Everything combined</a>. This script contains both a subscriber for the <code>/ardrone/navdata</code>
+ message as well as a publisher. The script sends a takeoff command and 
+then repeatedly sends the quadrotor forward and backward for 2 seconds. 
+To stop the quadrotor, either start the joystick node (and press and 
+release the L1 button), or catch the quadrotor in the air and turn it by
+ 90 degrees (to trigger the emergency stop). </li>
+</ul>
+<blockquote>
+<p><code>$ ./example4_combined.py</code></p>
+</blockquote>
+      
+    
+
+  
+  </div>
+  
+
+
+        
+    </article>
+
+    <div class="article-functions">
+      <ul class="nav nav-tabs">
+        
+
+<li class="active">
+  <a href="https://courses.edx.org/courses/course-v1:TUMx+AUTONAVx+2T2015/wiki/TUMx.AUTONAVx.2T2014/ardrone-instructions/">
+    <i class="icon fa fa-eye"></i>
+    View
+    <span class="sr">(active)</span>
+  </a>
+</li>
+
+  <li class="">
+    <a href="https://courses.edx.org/courses/course-v1:TUMx+AUTONAVx+2T2015/wiki/TUMx.AUTONAVx.2T2014/ardrone-instructions/_edit/">
+      <i class="icon fa fa-pencil"></i>
+      Edit
+      
+    </a>
+  </li>
+
+<li class="">
+  <a href="https://courses.edx.org/courses/course-v1:TUMx+AUTONAVx+2T2015/wiki/TUMx.AUTONAVx.2T2014/ardrone-instructions/_history/">
+    <i class="icon fa fa-clock-o"></i>
+    Changes
+    
+  </a>
+</li>
+
+
+
+
+
+
+
+
+
+      </ul>
+      <div class="timestamp">
+        <span class="label">Last modified:</span><br>
+        <span class="date">June 12, 2014, 4:40 p.m.</span>
+      </div>
+
+      
+      <div class="see-children">
+        <a href="https://courses.edx.org/courses/course-v1:TUMx+AUTONAVx+2T2015/wiki/TUMx.AUTONAVx.2T2014/ardrone-instructions/_dir/">See all children</a>
+      </div>
+      
+    </div>
+  </div>
+
+
+
+
+
+      
+    </div>
+
+  </section>
+
+
+      
+    </div>
+    
+      
+
+
+
+<footer id="footer-edx-v3" role="contentinfo" aria-label="Page Footer">
+    <h2 class="sr footer-about-title">About edX</h2>
+    <div class="footer-content-wrapper">
+      <div class="footer-logo">
+          <img alt="edX logo" src="AR_Drone_Instructions_Wiki_edX_files/edx-header-logo.png">
+      </div>
+
+      <div class="site-details">
+          <nav class="site-nav" aria-label="About edX">
+              <a href="https://www.edx.org/about-us">About</a>
+              <a href="https://www.edx.org/blog">Blog</a>
+              <a href="https://www.edx.org/news-announcements">News</a>
+              <a href="https://www.edx.org/student-faq">FAQs</a>
+              <a href="https://www.edx.org/contact">Contact</a>
+              <a href="https://www.edx.org/jobs">Jobs</a>
+              <a href="https://www.edx.org/donate">Donate</a>
+              <a href="https://www.edx.org/sitemap">Sitemap</a>
+          </nav>
+          <nav class="legal-notices" aria-label="Legal">
+              <a href="https://www.edx.org/edx-terms-service">Terms of Service &amp; Honor Code</a>
+              <a href="https://www.edx.org/edx-privacy-policy">Privacy Policy</a>
+              <a href="https://www.edx.org/accessibility">Accessibility Policy</a>
+          </nav>
+          <p class="copyright">© edX Inc.  All rights reserved except 
+where noted.  EdX, Open edX and the edX and Open EdX logos are 
+registered trademarks or trademarks of edX Inc.</p>
+
+          <div class="openedx-link">
+            <a href="http://open.edx.org/" title="Powered by Open edX">
+              <img alt="Powered by Open edX" src="AR_Drone_Instructions_Wiki_edX_files/edx-openedx-logo-tag.png" width="140">
+            </a>
+          </div>
+      </div>
+
+      <div class="external-links">
+        <div class="social-media-links">
+          <a href="http://www.facebook.com/EdxOnline" class="sm-link external" title="Facebook" rel="noreferrer">
+            <span class="icon fa fa-facebook-square" aria-hidden="true"></span>
+            <span class="sr">Like edX on Facebook</span>
+          </a>
+          <a href="https://twitter.com/edXOnline" class="sm-link external" title="Twitter" rel="noreferrer">
+            <span class="icon fa fa-twitter" aria-hidden="true"></span>
+            <span class="sr">Follow edX on Twitter</span>
+          </a>
+          <a href="https://www.youtube.com/user/edxonline?sub_confirmation=1" class="sm-link external" title="Youtube" rel="noreferrer">
+            <span class="icon fa fa-youtube" aria-hidden="true"></span>
+            <span class="sr">Subscribe to the edX YouTube channel</span>
+          </a>
+          <a href="http://www.linkedin.com/company/edx" class="sm-link external" title="LinkedIn" rel="noreferrer">
+            <span class="icon fa fa-linkedin-square" aria-hidden="true"></span>
+            <span class="sr">Follow edX on LinkedIn</span>
+          </a>
+          <a href="https://plus.google.com/+edXOnline" class="sm-link external" title="Google+" rel="noreferrer">
+            <span class="icon fa fa-google-plus-square" aria-hidden="true"></span>
+            <span class="sr">Follow edX on Google+</span>
+          </a>
+          <a href="http://www.reddit.com/r/edx" class="sm-link external" title="Reddit" rel="noreferrer">
+            <span class="icon fa fa-reddit" aria-hidden="true"></span>
+            <span class="sr">Subscribe to the edX subreddit</span>
+          </a>
+        </div>
+
+        <div class="mobile-app-links">
+          <a href="https://itunes.apple.com/us/app/edx/id945480667?mt=8" class="app-link external">
+            <img alt="Download the edX mobile app from the Apple App Store" src="AR_Drone_Instructions_Wiki_edX_files/app_store_badge_135x40.svg">
+          </a>
+          <a href="https://play.google.com/store/apps/details?id=org.edx.mobile" class="app-link external">
+            <img alt="Download the edX mobile app from Google Play" src="AR_Drone_Instructions_Wiki_edX_files/google_play_badge_45.png">
+          </a>
+        </div>
+      </div>
+    </div>
+</footer>
+
+
+    
+
+  </div>
+
+    <script type="text/javascript" src="AR_Drone_Instructions_Wiki_edX_files/lms-application.js" charset="utf-8"></script>
+    <script type="text/javascript" src="AR_Drone_Instructions_Wiki_edX_files/lms-modules.js" charset="utf-8"></script>
+
+    
+    
+    <script>
+      window.onload = add_schematic_handler(window.onload);
+    </script>
+
+    <script src="AR_Drone_Instructions_Wiki_edX_files/bootstrap-alert.js"></script>
+    <script src="AR_Drone_Instructions_Wiki_edX_files/bootstrap-collapse.js"></script>
+    <script src="AR_Drone_Instructions_Wiki_edX_files/bootstrap-modal.js"></script>
+
+    
+      
+
+<script type="text/x-mathjax-config;executed=true">
+  MathJax.Hub.Config({
+    tex2jax: {inlineMath: [ ['$','$'], ["\\(","\\)"]],
+              displayMath: [ ['$$','$$'], ["\\[","\\]"]]}
+  });
+</script>
+<script type="text/x-mathjax-config;executed=true">
+  window.HUB = MathJax.Hub;
+  MathJax.Hub.signal.Interest(function(message) {
+    if(message[0] === "End Math") {
+        set_mathjax_display_div_settings();
+    }
+  });
+  function set_mathjax_display_div_settings() {
+    $('.MathJax_Display').each(function( index ) {
+      this.setAttribute('tabindex', '0');
+      this.setAttribute('aria-live', 'off');
+      this.removeAttribute('role');
+      this.removeAttribute('aria-readonly');
+    });
+  }
+</script>
+
+
+<!-- This must appear after all mathjax-config blocks, so it is after the imports from the other templates.
+     It can't be run through static.url because MathJax uses crazy url introspection to do lazy loading of
+     MathJax extension libraries -->
+<script type="text/javascript" src="AR_Drone_Instructions_Wiki_edX_files/MathJax.js"></script>
+
+    
+  
+
+
+
+
+
+<div id="reader-feedback" class="sr" style="display:none" aria-hidden="false" aria-atomic="true" aria-live="assertive"></div><div id="lean_overlay"></div><div style="position: absolute; width: 0px; height: 0px; overflow: hidden; padding: 0px; border: 0px none; margin: 0px;"><div style="position: absolute; visibility: hidden; top: 0px; left: 0px; width: auto; padding: 0px; border: 0px none; margin: 0px; white-space: nowrap; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; font-size: 40px; font-weight: normal; font-style: normal; font-size-adjust: none; font-family: MathJax_Size1,sans-serif;" id="MathJax_Font_Test"></div></div></body></html>
