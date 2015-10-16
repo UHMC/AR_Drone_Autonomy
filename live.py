@@ -5,6 +5,7 @@
 #usage:
 # $ python
 # >>> import live
+# >>> live.init()
 # >>> live.<commandName>()
 # etc.
 
