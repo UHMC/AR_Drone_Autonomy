@@ -45,7 +45,7 @@ def land():
 	print("land..")
 	pub_land.publish(Empty())
 
-def commands():
+def help():
 	print("toff(): take off\n hov(): hover \n rotl(): rotate left \n rotr(): rotate right \n land(): land")
 
 #if __name__=='__main__'):
