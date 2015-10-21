@@ -34,7 +34,9 @@ def rot(angle):
 	print("turning "+str(angle)+" degrees..")
 	#convert degrees to radians
 	angle=angle*math.pi/180.
-	pub_velocity.publish(Twist(Vector3(0,0,0),Vector3(0,0,1)))
+	#make it possible to turn right
+	direc=1 if angle > 0. else direc=-1
+	pub_velocity.publish(Twist(Vector3(0,0,0),Vector3(0,0,direc)))
 	rospy.sleep(angle/(math.pi/2.))
 	pub_velocity.publish(Twist(Vector3(0,0,0),Vector3(0,0,0)))
 
