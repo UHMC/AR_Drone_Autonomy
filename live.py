@@ -9,6 +9,7 @@
 # >>> live.<commandName>()
 # etc.
 
+import math
 import rospy
 import roslib; roslib.load_manifest('ardrone_python')
 from std_msgs.msg import Empty
@@ -28,6 +29,12 @@ def init():
 def toff():
 	print("takeoff..")
 	pub_takeoff.publish(Empty())
+
+def rot(angle):
+	print("turning "+angle+" degrees..")
+	pub_velocity.publish(Twist(Vector3(0,0,0),Vector3(0,0,1)))
+	rospy.sleep(angle/(math.pi/2.))
+	pub_velocity.publish(Twist(Vector3(0,0,0),Vector3(0,0,0)))
 
 def rotl():
     	print("turning left around yaw axis..")
