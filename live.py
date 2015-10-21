@@ -35,9 +35,10 @@ def rot(angle):
 	#convert degrees to radians
 	angle=angle*math.pi/180.
 	#make it possible to turn right
-	direc=1 if angle > 0. else direc=-1
+	direc=1.
+	if angle<0.:direc=-1
 	pub_velocity.publish(Twist(Vector3(0,0,0),Vector3(0,0,direc)))
-	rospy.sleep(angle/(math.pi/2.))
+	rospy.sleep(abs(angle/(math.pi/2.)))
 	pub_velocity.publish(Twist(Vector3(0,0,0),Vector3(0,0,0)))
 
 def rotl():
@@ -55,6 +56,18 @@ def hov():
 def land():
 	print("land..")
 	pub_land.publish(Empty())
+
+def up(time):
+	print("up..")
+	pub_velocity.publish(Twist(Vector3(0,0,1),Vector3(0,0,0)))
+	rospy.sleep(time)
+	pub_velocity.publish(Twist(Vector3(0,0,0),Vector3(0,0,0)))
+
+def down(time):
+	print("down..")
+	pub_velocity.publish(Twist(Vector3(0,0,-1),Vector3(0,0,0)))
+	rospy.sleep(time)
+	pub_velocity.publish(Twist(Vector3(0,0,0),Vector3(0,0,0)))
 
 def help():
 	print("toff(): take off\n hov(): hover \n rotl(): rotate left \n rotr(): rotate right \n land(): land")
