@@ -49,6 +49,12 @@ def rotr():
 	print("turning right around yaw axis..")
 	pub_velocity.publish(Twist(Vector3(0,0,0),Vector3(0,0,-1)))
 
+def fo(time):
+	print("flying forward..")
+	pub_velocity.publish(Twist(Vector3(0.1,0,0),Vector3(0,0,0)))
+	rospy.sleep(time)
+	pub_velocity.publish(Twist(Vector3(0,0,0),Vector3(0,0,0)))
+
 def hov():
 	print("hover..")
     	pub_velocity.publish(Twist(Vector3(0,0,0),Vector3(0,0,0)))
