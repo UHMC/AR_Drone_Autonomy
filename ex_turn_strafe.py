@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-#modified from ./ex_turning.py
+#modified from ./ex_takeoff_turn_land.py
 
 import rospy
 import roslib; roslib.load_manifest('ardrone_python')
@@ -21,7 +21,7 @@ if __name__ == '__main__':
 	
 	print("takeoff..")
 	pub_takeoff.publish(Empty())
-	rospy.sleep(3.0)
+	rospy.sleep(5.0)
 	
 	#print("flying forward..")
 	#pub_velocity.publish(Twist(Vector3(0.05,0,0),Vector3(0,0,0)))
@@ -30,34 +30,53 @@ if __name__ == '__main__':
 	print("turning left around yaw axis..")
 	pub_velocity.publish(Twist(Vector3(0,0,0),Vector3(0,0,1)))
 	rospy.sleep(4.0)
+	
+	pub_velocity.publish(Twist(Vector3(0,0,0),Vector3(0,0,0)))
+	rospy.sleep(0.5)
 
 	print("turning right around yaw axis..")
 	pub_velocity.publish(Twist(Vector3(0,0,0),Vector3(0,0,-1)))
 	rospy.sleep(4.0)
+	
+	#print("flying forward..")
+	#pub_velocity.publish(Twist(Vector3(0.05,0,0),Vector3(0,0,0)))
+	#rospy.sleep(2.0)
 
 	print("stop..")
 	pub_velocity.publish(Twist(Vector3(0,0,0),Vector3(0,0,0)))
 	rospy.sleep(1.0)
-	
+
 	print("flying forward..")
 	pub_velocity.publish(Twist(Vector3(0.1,0,0),Vector3(0,0,0)))
 	rospy.sleep(1.0)
 
+	print("stop..")
+	pub_velocity.publish(Twist(Vector3(0,0,0),Vector3(0,0,0)))
+	rospy.sleep(0.5)
+
 	print("flying back..")
-	pub_velocity.publish(Twist(Vector3(-0.1,0,0),Vector3(0,0,0)))
-	rospy.sleep(1.0)
-
-	print("flying right..")
-	pub_velocity.publish(Twist(Vector3(0,-0.1,0),Vector3(0,0,0)))
-	rospy.sleep(1.0)
-
-	print("flying left..")
-	pub_velocity.publish(Twist(Vector3(0,0.1,0),Vector3(0,0,0)))
+	pub_velocity.publish(Twist(Vector3(-0.25,0,0),Vector3(0,0,0)))
 	rospy.sleep(1.0)
 
 	print("stop..")
 	pub_velocity.publish(Twist(Vector3(0,0,0),Vector3(0,0,0)))
+	rospy.sleep(0.5)
+
+	print("flying right..")
+	pub_velocity.publish(Twist(Vector3(0,-0.25,0),Vector3(0,0,0)))
 	rospy.sleep(1.0)
+
+	print("stop..")
+	pub_velocity.publish(Twist(Vector3(0,0,0),Vector3(0,0,0)))
+	rospy.sleep(0.5)
+
+	print("flying left..")
+	pub_velocity.publish(Twist(Vector3(0,0.25,0),Vector3(0,0,0)))
+	rospy.sleep(1.0)
+
+	print("stop..")
+	pub_velocity.publish(Twist(Vector3(0,0,0),Vector3(0,0,0)))
+	rospy.sleep(2.0)
 	
 	print("land..")
 	pub_land.publish(Empty())
