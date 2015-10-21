@@ -31,7 +31,7 @@ def toff():
 	pub_takeoff.publish(Empty())
 
 def rot(angle):
-	print("turning "+angle+" degrees..")
+	print("turning "+str(angle)+" degrees..")
 	pub_velocity.publish(Twist(Vector3(0,0,0),Vector3(0,0,1)))
 	rospy.sleep(angle/(math.pi/2.))
 	pub_velocity.publish(Twist(Vector3(0,0,0),Vector3(0,0,0)))
