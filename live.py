@@ -35,7 +35,7 @@ def rotl():
     
 def rotr():
 	print("turning right around yaw axis..")
-	pub_velocity.publish(Twist(Vector3(0,0,0),Vector3(0,0,1)))
+	pub_velocity.publish(Twist(Vector3(0,0,0),Vector3(0,0,-1)))
 
 def hov():
 	print("hover..")
