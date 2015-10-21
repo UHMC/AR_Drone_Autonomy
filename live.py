@@ -32,6 +32,8 @@ def toff():
 
 def rot(angle):
 	print("turning "+str(angle)+" degrees..")
+	#convert degrees to radians
+	angle=angle*math.pi/180.
 	pub_velocity.publish(Twist(Vector3(0,0,0),Vector3(0,0,1)))
 	rospy.sleep(angle/(math.pi/2.))
 	pub_velocity.publish(Twist(Vector3(0,0,0),Vector3(0,0,0)))
